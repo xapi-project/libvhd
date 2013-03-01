@@ -1,12 +1,12 @@
 # OASIS_START
-# DO NOT EDIT (digest: 6156af2d1e558b51e40564c278d8e495)
+# DO NOT EDIT (digest: d7e3220348b1a5abd6fd29091118b261)
 version = "0.1"
 description = "Bindings to libvhd"
 requires = "rpclib rpclib.syntax"
-archive(byte) = "libvhd.cma"
-archive(byte, plugin) = "libvhd.cma"
-archive(native) = "libvhd.cmxa"
-archive(native, plugin) = "libvhd.cmxs"
-exists_if = "libvhd.cma"
+archive(byte) = "libxcpvhd.cma"
+archive(byte, plugin) = "libxcpvhd.cma"
+archive(native) = "libxcpvhd.cmxa"
+archive(native, plugin) = "libxcpvhd.cmxs"
+exists_if = "libxcpvhd.cma"
 # OASIS_STOP
 
