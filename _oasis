@@ -13,5 +13,5 @@ Library libxcpvhd
   Modules: Vhd
   CSources: vhd_stubs.c
   BuildDepends: rpclib, rpclib.syntax
-  CCLib: -lvhd -lvhdio
+  CCLib: -lvhd -luuid
 
