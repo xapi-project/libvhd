@@ -1,0 +1,15 @@
+This software depends on:
+
+  * OCaml
+  * findlib
+  * obuild
+  * make
+  * libvhd
+
+It can be built by:
+
+    make
+
+and installed by
+
+    make install [DESTDIR=...]
