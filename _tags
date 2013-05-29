@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: c4bad30ac7c94b8b2c90fd6d268c170a)
+# DO NOT EDIT (digest: c5d5d11e43c9388d463d5a3f6fe8bbd8)
 # Ignore VCS directories, you can use the same kind of rule outside 
 # OASIS_START/STOP if you want to exclude directories that contains 
 # useless stuff for the build process
@@ -13,14 +13,14 @@
 ".git": not_hygienic
 "_darcs": -traverse
 "_darcs": not_hygienic
-# Library libxcpvhd
-"lib/libxcpvhd.cmxs": use_libxcpvhd
-<lib/libxcpvhd.{cma,cmxa}>: oasis_library_libxcpvhd_cclib
-"lib/liblibxcpvhd_stubs.lib": oasis_library_libxcpvhd_cclib
-"lib/dlllibxcpvhd_stubs.dll": oasis_library_libxcpvhd_cclib
-"lib/liblibxcpvhd_stubs.a": oasis_library_libxcpvhd_cclib
-"lib/dlllibxcpvhd_stubs.so": oasis_library_libxcpvhd_cclib
-<lib/libxcpvhd.{cma,cmxa}>: use_liblibxcpvhd_stubs
+# Library libvhd
+"lib/libvhd.cmxs": use_libvhd
+<lib/libvhd.{cma,cmxa}>: oasis_library_libvhd_cclib
+"lib/liblibvhd_stubs.lib": oasis_library_libvhd_cclib
+"lib/dlllibvhd_stubs.dll": oasis_library_libvhd_cclib
+"lib/liblibvhd_stubs.a": oasis_library_libvhd_cclib
+"lib/dlllibvhd_stubs.so": oasis_library_libvhd_cclib
+<lib/libvhd.{cma,cmxa}>: use_liblibvhd_stubs
 <lib/*.ml{,i}>: pkg_rpclib
 <lib/*.ml{,i}>: pkg_rpclib.syntax
 "lib/vhd_stubs.c": pkg_rpclib
