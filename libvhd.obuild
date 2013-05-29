@@ -9,5 +9,10 @@ library libvhd
   cdir: lib
   c-sources: vhd_stubs.c
   build-deps: rpclib
-  c-libs: -lvhd -luuid
+  c-libs: vhd uuid
+
+executable open
+  main: open.ml
+  src-dir: lib_test
+  build-deps: libvhd
 
