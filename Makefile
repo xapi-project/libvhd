@@ -18,7 +18,7 @@ build: configure
 
 install: build
 	ocamlfind remove $(PKGNAME)
-	ocamlfind install $(PKGNAME) $(shell find dist/build/lib-libvhd -type f) lib/META $(INSTALL_ARGS)
+	ocamlfind install $(PKGNAME) $(shell find dist/build/lib-vhdlib -type f) lib/META $(INSTALL_ARGS)
 
 clean:
 	obuild clean
