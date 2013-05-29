@@ -1,0 +1,13 @@
+name: libvhd 
+version: 0.9.0
+synopsis: Bindings to libvhd, the vhd manipulation library
+obuild-ver: 1
+
+library libvhd
+  src-dir: lib
+  modules: Vhd
+  cdir: lib
+  c-sources: vhd_stubs.c
+  build-deps: rpclib
+  c-libs: -lvhd -luuid
+
