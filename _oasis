@@ -1,0 +1,21 @@
+OASISFormat:  0.3
+Name:         libvhd
+Version:      0.9.0
+Synopsis:     Bindings to libvhd
+License:      BSD3
+Authors:      various
+Copyrights:   (C) 2012 Citrix
+BuildTools:   ocamlbuild
+Plugins:      DevFiles (0.3), META (0.3)
+
+Library libvhd
+  Path: lib
+  Modules: Vhd
+  CSources: vhd_stubs.c
+  CCLib: -lvhd -luuid
+
+Executable open
+  Install: false
+  Path: lib_test
+  MainIs: open.ml
+  BuildDepends: libvhd

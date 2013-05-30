@@ -1,0 +1,27 @@
+# OASIS_START
+# DO NOT EDIT (digest: b0efa691add6bc3eff243463bf028232)
+# Ignore VCS directories, you can use the same kind of rule outside 
+# OASIS_START/STOP if you want to exclude directories that contains 
+# useless stuff for the build process
+<**/.svn>: -traverse
+<**/.svn>: not_hygienic
+".bzr": -traverse
+".bzr": not_hygienic
+".hg": -traverse
+".hg": not_hygienic
+".git": -traverse
+".git": not_hygienic
+"_darcs": -traverse
+"_darcs": not_hygienic
+# Library libvhd
+"lib/libvhd.cmxs": use_libvhd
+<lib/libvhd.{cma,cmxa}>: oasis_library_libvhd_cclib
+"lib/liblibvhd_stubs.lib": oasis_library_libvhd_cclib
+"lib/dlllibvhd_stubs.dll": oasis_library_libvhd_cclib
+"lib/liblibvhd_stubs.a": oasis_library_libvhd_cclib
+"lib/dlllibvhd_stubs.so": oasis_library_libvhd_cclib
+<lib/libvhd.{cma,cmxa}>: use_liblibvhd_stubs
+# Executable open
+"lib_test/open.byte": use_libvhd
+<lib_test/*.ml{,i}>: use_libvhd
+# OASIS_STOP

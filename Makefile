@@ -1,27 +1,34 @@
-OBUILDOPTS=--debug+
-#CONFOPTS=--enable-library-bytecode --enable-executable-bytecode
-PKGNAME=libvhd
 
-ifneq "$(DESTDIR)" ""
-INSTALL_ARGS := -destdir $(DESTDIR)
-endif
+SETUP = ocaml setup.ml
 
-.PHONY: configure build install clean uninstall
+build: setup.data
+	$(SETUP) -build $(BUILDFLAGS)
 
-all: build
+doc: setup.data build
+	$(SETUP) -doc $(DOCFLAGS)
 
-configure:
-	obuild $(OBUILDOPTS) configure $(CONFOPTS)
+test: setup.data build
+	$(SETUP) -test $(TESTFLAGS)
 
-build: configure
-	obuild $(OBUILDOPTS) build
+all: 
+	$(SETUP) -all $(ALLFLAGS)
 
-install: build
-	ocamlfind remove $(PKGNAME)
-	ocamlfind install $(PKGNAME) $(shell find dist/build/lib-vhdlib -type f) lib/META $(INSTALL_ARGS)
-
-clean:
-	obuild clean
+install: setup.data
+	$(SETUP) -install $(INSTALLFLAGS)
 
 uninstall:
-	ocamlfind remove $(PKGNAME)
+	ocamlfind remove libxcpvhd
+
+reinstall: setup.data
+	$(SETUP) -reinstall $(REINSTALLFLAGS)
+
+clean: 
+	$(SETUP) -clean $(CLEANFLAGS)
+
+distclean: 
+	$(SETUP) -distclean $(DISTCLEANFLAGS)
+
+setup.data:
+	$(SETUP) -configure $(CONFIGUREFLAGS)
+
+.PHONY: build doc test all install uninstall reinstall clean distclean configure
