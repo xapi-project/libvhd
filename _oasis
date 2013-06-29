@@ -1,6 +1,6 @@
 OASISFormat:  0.3
 Name:         vhdlib
-Version:      0.9.0
+Version:      0.9.1
 Synopsis:     Bindings to libvhd
 License:      BSD3
 Authors:      various
