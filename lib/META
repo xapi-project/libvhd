@@ -1,6 +1,6 @@
 # OASIS_START
-# DO NOT EDIT (digest: 42bd70760a5df2a2f38b09543f1c6a90)
-version = "0.9.1"
+# DO NOT EDIT (digest: f46c8359c264eaebcc2fc5dc6666d4f7)
+version = "1.0.0"
 description = "Bindings to libvhd"
 archive(byte) = "vhdlib.cma"
 archive(byte, plugin) = "vhdlib.cma"

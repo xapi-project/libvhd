@@ -1,5 +1,5 @@
 (* OASIS_START *)
-(* DO NOT EDIT (digest: 378532dfc1bceb05a9305b49e27e75b9) *)
+(* DO NOT EDIT (digest: b05a464bfa7dacb67309d535d5445c1f) *)
 module OASISGettext = struct
 (* # 21 "src/oasis/OASISGettext.ml" *)
 
@@ -489,8 +489,8 @@ let package_default =
           (["oasis_library_vhdlib_cclib"; "ocamlmklib"; "c"],
             [(OASISExpr.EBool true, S [A "-lvhd"; A "-luuid"])])
        ];
-     includes = [("lib_test", ["lib"])];
-     }
+     includes = [("lib_test", ["lib"])]
+  }
   ;;
 
 let dispatch_default = MyOCamlbuildBase.dispatch_default package_default;;
